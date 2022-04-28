@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curriculum Vitae</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        dl dt {
+            width: 200px;
+            float: left;
+        }
+
+        .title,
+        .authors,
+        .doi {
+            display: block;
+        }
+    </style>
+    <script src="test.js"></script>
+    <script>
+        // PubMed NCBI querystring.
+        let term = "Yeo, Tomas[Full Author Name]";
+        // Initials of the author to bold.
+        let author = "Yeo T";
+        // Using API key issued from pubmed.
+        let apiKey = '7c47b28884ded2007c28466a9f9f2d92f808';
+
+        // Execute after document is ready.
+        window.onload = () => {
+            searchPubMed(term, author, apiKey);
+        };
+    </script>
+</head>
+<body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="d-flex pb-3 mb-5 border-bottom">
+            <h1>Curriculum Vitae</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Publications</h2>
+                <div class="row g-5">
+                    <div class="col-md-3">
+                        <p>Contributing author as <strong>Yeo T</strong></p>
+                    </div>
+                    <div class="col-md-9">
+                        <ol id="pubmed">
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <template id="article">
+        <li><span class="title"></span><span class="authors small"></span><span class="doi small"></span></li>
+    </template>
+</body>
+</html>
