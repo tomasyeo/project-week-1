@@ -1,6 +1,5 @@
 const urlEsearch = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi';
 const urlEsummary = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi';
-//let apiKey = '7c47b28884ded2007c28466a9f9f2d92f808';
 
 let paramsDefault = {
     db: 'pubmed',       // DB to query.

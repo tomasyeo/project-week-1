@@ -1,10 +1,13 @@
 # project-week-1
 ## Querying PubMed 
 
-This Javascript allows a user inject his/her/they/it/whatever publications by making asynchronous request 
-to https://eutils.ncbi.nlm.nih.gov via REST API with a provided search term.
+This Javascript allows a user inject his/her/they/it/whatever publications dynamically by making asynchronous request 
+to https://eutils.ncbi.nlm.nih.gov via REST API with a provided search term. 
 
 This simplified script use native Javascript API to make asynchronous calls to make integration into a web page simpler.
+
+Here's an example how it looks like on a squarespace page. Scroll to down to 'publications'.
+https://www.fidock.org/david-fidock 
 
 ### Instructions
 
