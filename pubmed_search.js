@@ -3,7 +3,6 @@ const urlEsummary = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi
 //let apiKey = '7c47b28884ded2007c28466a9f9f2d92f808';
 
 let paramsDefault = {
-    //api_key: apiKey,    // Personal API key.
     db: 'pubmed',       // DB to query.
     usehistory: 'y',    // Set this to 'y' to use previously cache history.
     retmode: 'json',    // Set returned results to json. Default is xml.
@@ -14,6 +13,7 @@ let paramsDefault = {
 async function searchPubMed(term, key_author, api_key) {
     console.log(term, key_author, api_key);
 
+    // Add your personal API key.
     paramsDefault.api_key = api_key;
 
     let searchParams = new URLSearchParams(paramsDefault);
@@ -55,6 +55,7 @@ function fetchRequest(href, searchParams, method = 'GET') {
             throw new Error("Not implemented");
             break;
     }
+    // Return a promise to caller.
     return fetch(url, options);
 }
 
